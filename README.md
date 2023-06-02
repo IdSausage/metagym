@@ -1,70 +1,296 @@
-# Getting Started with Create React App
+# This is 105 integration module's repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contain backend and frontend
 
-## Available Scripts
+## To run the frontend
+use
+```
+    npm start
+```
+## To run the backend at port:8000 that run the user server
+use
+```
+    npm run start
+```
+## To run the backend at port:5000 that run the store server
+use
+```
+    npm run start_store
+```
 
-In the project directory, you can run:
+# Metagym
 
-### `npm start`
+### All of the responses will be wrapped with this data before sending
+| Parameter | Type | Description |
+|-----|:----:|:-----|
+| success| boolean | the status of request|
+| msg | string | message for each request |
+| data | JSON | the actual data |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Start with the user first
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Login
 
-### `npm test`
+#### URL
+`POST /login`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+|username|String|username 
+|password|String| password|
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example
+```
+   {
+     "username" : "thistine",
+     "password" : "1234"
+   }
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+#### Success
+Response
 
-### `npm run eject`
+###### Status Code
+` 200`  login success
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+|email|String| user email
+|username|String| username
+|id|String| user id
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example
+```
+{
+   "email":"tine@thistine.com",
+   "username":"thistine",
+   "id" : "1"
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+**noted: If success, the Response will be sent with cookie named access_token**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Register
 
-## Learn More
+#### URL
+`POST /register`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ 
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+|id|Int|id |
+|username|String|username |
+|email| String | email |
+|password|String| password with hash|
+|termOfUse|Boolean| check if player agree with term of service|
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example
+```
+   {
+    "id":"20254"
+    "username":"thistine",
+    "email":"tine@thistine.com",
+    "password" : "1234"
+    "termOfUse":true
+   }
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+#### Success
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###### Status Code
+` 200`  register user succesfully
 
-### Making a Progressive Web App
+no response body
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Logout
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### URL
+`POST .logout`
 
-### Deployment
+#### Request Body 
+No Request Body
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### Success
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###### Status Code
+` 200`  got json text "user has been logged out"
+
+
+### registerForm
+#### URL
+`GET /register/form`
+
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+|age | string | age of user |
+|height | string | height of user |
+|weight | string | weight of user |
+
+
+#### Success
+
+###### Status Code
+` 200`  got data
+
+
+### register the workout style
+register the workout style that match user style
+
+#### URL
+`POST /register/workout-style`
+
+ 
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+|id | string | id of workout |
+|name | string | name of workout |
+|desc | string | description of workout |
+
+
+#### Success
+Response
+
+###### Status Code
+` 200`  success got data
+
+### get single workout plan
+
+#### URL
+`GET /get-all-plan/:id`
+
+ 
+#### Request Body 
+no request body
+
+
+#### Success
+Response
+
+###### Status Code
+` 200`  success got data
+
+
+
+### Create Plan
+
+
+#### URL
+`POST /createplan`
+
+ 
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+| id | string | id of plan |
+| header | string | plan title |
+| description | string | plan description |
+| userId | string | user id that create that plan |
+
+
+#### Success
+Response
+
+###### Status Code
+` 200`  success got data
+
+### get all product
+
+#### URL
+`GET /get-all-product`
+ 
+#### Request Body 
+No Request Body
+
+#### Success
+Response
+
+###### Status Code
+` 200`  success got data
+
+
+
+### get Product
+#### URL
+`GET /getproduct/:id`
+
+### parameter
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+| id | string | id of product |
+
+#### Request Body 
+No Request Body
+
+#### Success
+
+###### Status Code
+` 200`  success got data
+
+
+### second is the store side
+
+
+### storeRegister
+register the store account
+
+#### URL
+`POST /store/register`
+
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+| country | string | which country that the store are belong with  |
+| phoneNumber | string | store phoneNumber |
+| firstname | string | firstname of store owner |
+| middlename | string | middle name of store owner |
+| lastname | string | lastname of store owner |
+| email | string | store email |
+| password | string | store account password |
+
+#### Success
+
+###### Status Code
+` 200` success got data
+
+### createAccount
+#### URL
+`POST create-account`
+
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+| storeName | string | store name  |
+| about_store | string | about their store  |
+| category | string | category of their product  |
+| id | string | id of store  |
+
+#### Success
+
+###### Status Code
+` 200`  success got data
+
+
+### storeLogin
+#### URL
+`POST /store/login`
+
+#### Request Body 
+| Parameter | Type | Description |
+|----------|:-------------:|:------|
+| email | string | stored email  |
+| password | string | store account password  |
+
+#### Success
+
+###### Status Code
+` 200`  success got data and set cookie as access_token
