@@ -1,0 +1,128 @@
+.product-container{
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    background-color: #FFE4E6;
+}
+
+.product-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #FE6D73;
+    position: sticky;
+    top: 0;
+}
+
+.product_nav-profile{
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-details{
+    display: flex;
+    column-gap: 10px;
+    padding: 20px;
+}
+
+.product_details-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 10px;
+    padding: 15px;
+    background-color: #fcfbfb;
+    border-radius: 10px;
+}
+
+.product_details-profile{
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.product-store{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    background-color: #fcfbfb;
+}
+
+.product_store-profile{
+    max-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+}
+
+.product-rating{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_rating-details{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    padding: 60px 120px 20px 20px;
+    display: flex;
+    column-gap: 60px;
+    align-items: flex-start;
+    background-color: #fcfbfb;
+}
+
+.product_rating-img{
+    max-width: 300px;
+    max-height: 250px;
+}
+
+.product_rating-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.product_comment-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.product_comment-item{
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #fcfbfb;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 500px;
+    padding: 10px;
+    column-gap: 20px;
+}
+
+.product_comment-profile{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.comment_rating-icon{
+    max-width: 10px;
+    max-height: 10px;
+}
+
+.product_side-nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-self: flex-end;
+    margin-bottom: auto;
+    top: 80vh;
+    position: fixed;
+}

@@ -1,0 +1,45 @@
+.workout-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FE6D73;
+}
+
+.workout-header{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: white;
+    padding-top: 20px;
+}
+
+.workout-img{
+    max-width: 100%;
+    height: 150px;
+    max-height: 30%;
+    object-fit: cover;
+}
+
+.workout-option{
+    max-width: 80vw;
+}
+
+.workout-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto' ,sans-serif;
+    color: white;
+    padding:10px;
+}
+
+.workout-nav{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+    padding: 20px;
+    background-color: white;
+}

@@ -1,0 +1,73 @@
+.input-field{
+    padding: 4px 15px;
+    margin: 8px 0;
+}
+
+.input-checkbox{
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] + label {
+    margin-left: 10px;
+  }
+
+.inp-extra-small{
+    width: 100px;
+    border: 1.5px solid #cfcfcf;
+}
+
+.inp-small{
+    width: 200px;
+    border: 1.5px solid #cfcfcf;
+    border-radius: 10px;
+}
+
+.inp-medium{
+    width: 500px;
+    border: 2px solid #cfcfcf;
+    border-radius: 20px;
+}
+.inp-large{
+    width: 800px;
+    border: 2.5px solid #cfcfcf;
+    border-radius: 30px;
+}
+
+.des-low{
+    height: 20px;
+}
+
+.inp-description{
+    height: 60px;
+}
+
+.desc-medium{
+    height: 40px;
+}
+
+.desc-high{
+    height: 80px;
+}
+
+.box {
+    border-radius: 2px;
+}
+
+.radius-box{
+    border-radius: 10px;
+}
+
+.circle-box{
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 376px) {
+    .input-field{
+        width: 200px;
+    }
+}

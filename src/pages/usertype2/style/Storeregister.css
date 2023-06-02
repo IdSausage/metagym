@@ -1,0 +1,56 @@
+.s_reg-container {
+    width: 100%;
+    height: fit-content;
+    background-image: url('../../../Images/register_background.jpg');
+    background-size: cover;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.s_reg-profile {
+    max-width: 500px;
+    max-height: 400px;
+    object-fit: cover;
+    margin-right: auto;
+    align-self: center;
+}
+
+.s_reg-main {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.s_reg-logo {
+    max-width: 400px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.s_reg-header {
+    text-align: center;
+}
+
+.s_reg-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.s_reg-spe-inp{
+    display: flex;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.s_reg-icon{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.s_reg-nav{
+    align-self: flex-end;
+}

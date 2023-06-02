@@ -1,0 +1,117 @@
+.reg_container{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../Images/register_background.jpg');
+    background-size: cover;
+}
+
+.reg_logo-mobile{
+    display: none;
+}
+
+.reg_header-mobile{
+    display: none;
+}
+
+.reg_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-left: 70px;
+}
+
+.reg_profile-img{
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.reg_logo{
+    width: 300px;
+    height: 60px;
+    padding: 0;
+    object-fit: cover;
+}
+
+.reg_form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 700px;
+    height: 550px;
+    margin-left: 100px;
+}
+
+.reg_form-body{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    border: 1px solid grey;
+    border-radius: 8px;
+    max-width: 800px;
+    padding: 20px 100px 20px 20px;
+    margin-left: 10px;
+    font-family: 'Roboto' ,sans-serif;
+}
+
+.reg_checkbox{
+    display: inline-block;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Roboto' , sans-serif;
+    margin-left: 40px;
+}
+
+.reg_register-button{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+@media screen and (max-width: 381px) {
+    .reg_container{
+        flex-direction: column;
+        background: url('../../Images/mobile_background.jpg');
+        background-size: contain;
+        overflow: hidden;
+    }
+    .reg_profile{
+        flex-direction: column;
+    }
+    .reg_form-header{
+        display: none;
+    }
+    .reg_logo-mobile{
+        display: inline;
+    }
+    .reg_header-mobile{
+        display: inline;
+    }
+    .reg_form-input{
+        width: 375px;
+        height: 550px;
+        margin-left: 0;
+    }
+    .reg_form-body{
+        border: none;
+        border-radius: 8px;
+        width: 300px;
+        padding: 5px 25px 5px 5px;
+        margin-left: 10px;
+        font-family: 'Roboto' ,sans-serif;
+    }
+    .reg_register-button{
+        align-self: center;
+        justify-self: center;
+        margin-top: 30px;
+        margin-right: 80px;
+    }
+    .reg_profile-img{
+        width: 200px;
+    }
+}
+

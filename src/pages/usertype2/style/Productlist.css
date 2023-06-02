@@ -1,0 +1,9 @@
+.product_list-container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FE6D73;
+    row-gap: 30px;
+}

@@ -1,0 +1,19 @@
+.userplan-container{
+    width: 100%;
+    height: fit-content;
+}
+
+
+.userplan_todo-item{
+    background-color: white;
+    width: auto;
+    height: fit-content;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.userplan_todo-item:nth-last-of-type(1){
+    border-bottom: none;
+}

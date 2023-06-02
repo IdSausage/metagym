@@ -1,0 +1,107 @@
+.myplan_top-nav{
+    display: none;
+}
+
+.myplan_botton-nav{
+    display: none;
+}
+
+.myplan-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.myplan-header{
+    height: 40%;
+    width: 97.5%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.myplan_header-text-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.myplan_header-img{
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.myplan_header-btn{
+    display: flex;
+    column-gap: 6px;
+}
+
+.myplan-main{
+    height: 60%;
+    width: 100%;
+    background-color: #FE6D73;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.myplan-todo{
+    width: 60%;
+    height: fit-content;
+    border: 1px solid black;
+}
+
+.myplan_todo-item{
+    background-color: white;
+    width: auto;
+    height: fit-content;
+    padding: 10px 100px 10px 10px;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.myplan_todo-item:nth-last-of-type(1){
+    border-bottom: none;
+}
+
+
+.myplan_todo-add-item{
+    background-color: white;
+    width: auto;
+    height: fit-content;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.myplan_todo-img{
+    max-width: 200px;
+    max-height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:376px) {
+    .myplan-header{
+        flex-direction: column;
+        background-image: url('../../Images/jogging.jpg');
+        background-size: cover;
+        max-width: 91%;
+        max-height: 200px;
+    }
+    .myplan_header-img{
+        display: none;
+    }
+    .myplan_header-btn{
+        display: none;
+    }
+}
